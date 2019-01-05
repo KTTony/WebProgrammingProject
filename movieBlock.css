@@ -167,7 +167,9 @@ h2{
     /* border: 1px solid red; */
     display:inline-flex;
     justify-content: center;
-    margin-bottom: 40px;
+    margin: 20px;
+    padding: 5px;
+    background-color: white;
     /* background: linear-gradient(-20deg, transparent 200px, #58a 0) right; */
     box-shadow: 0 0 2px 2px rgba(0,0,0,0.6);
   }
@@ -230,6 +232,10 @@ img{
 
 .tmdb-result{
   background: linear-gradient(-20deg, transparent 400px, #58a 0) right;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 
