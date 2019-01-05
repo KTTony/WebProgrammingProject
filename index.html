@@ -19,15 +19,16 @@
         <form action="search">
             <input class="text" type="text" placeholder="Search...">
             <input class="sub" type="image" alt="Login" onclick="search" src="https://firebasestorage.googleapis.com/v0/b/wpproject-39c2f.appspot.com/o/magnifier%20(1).png?alt=media&token=865ad154-3565-49d2-822a-9597ca809087">
-            
+
         </form>
         <div class="Tmap"><input type="button" value="電影院地圖"></div>
     </div>
     <div class="goToTop">TOP</div>
     <div class="backToMainForSearch">回首頁</div>
-    <!-- <a href="./index.html">回首頁</a> -->
-    <style>
-        #map {
+    <div class="main">
+        <!-- <a href="./index.html">回首頁</a> -->
+        <style>
+            #map {
           height: 500px;
           width: 400px;
         }
@@ -44,29 +45,9 @@
             animation: 40s linear infinite;
         }
 </style>
-    <h2>熱門推薦電影</h2>
-    <div class="movieWrap">
-        <div class="movie_">
-            <div class="movie_img">
-                <img src="https://upload.wikimedia.org/wikipedia/zh/6/6d/436px-Amazing_Spider-Man_You%27re_Hired%21_Vol_1_1_Textless.jpg">
-            </div>
-            <div class="movie_context">
-                <div class="movie_title">
-                    <a>title</a>
-                </div>
-                <div class="movie_time">
-                    <h4>上映日期: 2018/12/12</h4>
-                </div>
-                <div class="movie_score">
-                    <h4>評價 : 8</h4>
-                </div>
-                <div class="movie_info">
-                    <h3>簡介</h3>
-                    <p>information123456789654987654321</p>
-                </div>
-            </div>
-        </div>
-        <div class="movie_">
+        <h2>熱門推薦電影</h2>
+        <div class="movieWrap">
+            <div class="movie_">
                 <div class="movie_img">
                     <img src="https://upload.wikimedia.org/wikipedia/zh/6/6d/436px-Amazing_Spider-Man_You%27re_Hired%21_Vol_1_1_Textless.jpg">
                 </div>
@@ -86,147 +67,166 @@
                     </div>
                 </div>
             </div>
-    </div>
+            <div class="movie_">
+                <div class="movie_img">
+                    <img src="https://upload.wikimedia.org/wikipedia/zh/6/6d/436px-Amazing_Spider-Man_You%27re_Hired%21_Vol_1_1_Textless.jpg">
+                </div>
+                <div class="movie_context">
+                    <div class="movie_title">
+                        <a>title</a>
+                    </div>
+                    <div class="movie_time">
+                        <h4>上映日期: 2018/12/12</h4>
+                    </div>
+                    <div class="movie_score">
+                        <h4>評價 : 8</h4>
+                    </div>
+                    <div class="movie_info">
+                        <h3>簡介</h3>
+                        <p>information123456789654987654321</p>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-    <div class="tmdb-result">
-    </div>
+        <div class="tmdb-result">
+        </div>
 
 
 
-    <section id="map-view" class="hidden">
-        <input id="pac-input" class="controls" type="text" placeholder="Search Box" value="movie theater" aria-required="true"
-            style="margin:17px;width:18%">
-        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
-            y="0px" viewBox="0 0 507.2 507.2" style="enable-background:new 0 0 507.2 507.2;" xml:space="preserve">
-            <circle style="fill:#F15249;" cx="253.6" cy="253.6" r="253.6" />
-            <path style="fill:#AD0E0E;" d="M147.2,368L284,504.8c115.2-13.6,206.4-104,220.8-219.2L367.2,148L147.2,368z" />
-            <path style="fill:#FFFFFF;" d="M373.6,309.6c11.2,11.2,11.2,30.4,0,41.6l-22.4,22.4c-11.2,11.2-30.4,11.2-41.6,0l-176-176
+        <section id="map-view" class="hidden">
+            <input id="pac-input" class="controls" type="text" placeholder="Search Box" value="movie theater"
+                aria-required="true" style="margin:17px;width:18%">
+            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                x="0px" y="0px" viewBox="0 0 507.2 507.2" style="enable-background:new 0 0 507.2 507.2;" xml:space="preserve">
+                <circle style="fill:#F15249;" cx="253.6" cy="253.6" r="253.6" />
+                <path style="fill:#AD0E0E;" d="M147.2,368L284,504.8c115.2-13.6,206.4-104,220.8-219.2L367.2,148L147.2,368z" />
+                <path style="fill:#FFFFFF;" d="M373.6,309.6c11.2,11.2,11.2,30.4,0,41.6l-22.4,22.4c-11.2,11.2-30.4,11.2-41.6,0l-176-176
            c-11.2-11.2-11.2-30.4,0-41.6l23.2-23.2c11.2-11.2,30.4-11.2,41.6,0L373.6,309.6z" />
-            <path style="fill:#D6D6D6;" d="M280.8,216L216,280.8l93.6,92.8c11.2,11.2,30.4,11.2,41.6,0l23.2-23.2c11.2-11.2,11.2-30.4,0-41.6
+                <path style="fill:#D6D6D6;" d="M280.8,216L216,280.8l93.6,92.8c11.2,11.2,30.4,11.2,41.6,0l23.2-23.2c11.2-11.2,11.2-30.4,0-41.6
            L280.8,216z" />
-            <path style="fill:#FFFFFF;" d="M309.6,133.6c11.2-11.2,30.4-11.2,41.6,0l23.2,23.2c11.2,11.2,11.2,30.4,0,41.6L197.6,373.6
+                <path style="fill:#FFFFFF;" d="M309.6,133.6c11.2-11.2,30.4-11.2,41.6,0l23.2,23.2c11.2,11.2,11.2,30.4,0,41.6L197.6,373.6
            c-11.2,11.2-30.4,11.2-41.6,0l-22.4-22.4c-11.2-11.2-11.2-30.4,0-41.6L309.6,133.6z" />
-        </svg>
+            </svg>
 
-        <div id="map" style="height:70%;width:70%;"></div>
-    </section>
-    <script>
-        var marker;
-        async function initAutocomplete() {
-            var pos;
-            map = new google.maps.Map(document.getElementById('map'), {
-                center: { lat: 22.7340927, lng: 120.2814604 },
-                zoom: 12
-            });
-            if (navigator.geolocation) {
-                navigator.geolocation.getCurrentPosition(function (position) {
-                    pos = {
-                        lat: position.coords.latitude,
-                        lng: position.coords.longitude
-                    };
-                    // map.setZoom(12);
-                    map.setCenter(pos);
-                    showTheater()
+            <div id="map" style="height:70%;width:70%;"></div>
+        </section>
+        <script>
+            var marker;
+            async function initAutocomplete() {
+                var pos;
+                map = new google.maps.Map(document.getElementById('map'), {
+                    center: { lat: 22.7340927, lng: 120.2814604 },
+                    zoom: 12
                 });
-            }
-        }
-        async function showTheater() {
-            var input = document.getElementById('pac-input');
-            var searchBox = new google.maps.places.SearchBox(input);
-            map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
-            await map.addListener('bounds_changed', function () {
-                searchBox.setBounds(map.getBounds());
-            }, true);
-
-            var markers = [];
-            await searchBox.addListener('places_changed', function () {
-                var places = searchBox.getPlaces();
-
-                if (places.length == 0) {
-                    return;
+                if (navigator.geolocation) {
+                    navigator.geolocation.getCurrentPosition(function (position) {
+                        pos = {
+                            lat: position.coords.latitude,
+                            lng: position.coords.longitude
+                        };
+                        // map.setZoom(12);
+                        map.setCenter(pos);
+                        showTheater()
+                    });
                 }
-                markers.forEach(function (marker) {
-                    marker.setMap(null);
-                });
-                markers = [];
-                var bounds = new google.maps.LatLngBounds();
-                places.forEach(function (place) {
-                    if (!place.geometry) {
-                        console.log("Returned place contains no geometry");
+            }
+            async function showTheater() {
+                var input = document.getElementById('pac-input');
+                var searchBox = new google.maps.places.SearchBox(input);
+                map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
+                await map.addListener('bounds_changed', function () {
+                    searchBox.setBounds(map.getBounds());
+                }, true);
+
+                var markers = [];
+                await searchBox.addListener('places_changed', function () {
+                    var places = searchBox.getPlaces();
+
+                    if (places.length == 0) {
                         return;
                     }
-                    var icon = {
-                        url: place.icon,
-                        size: new google.maps.Size(71, 71),
-                        origin: new google.maps.Point(0, 0),
-                        anchor: new google.maps.Point(17, 34),
-                        scaledSize: new google.maps.Size(25, 25)
-                    };
-                    markers.push(new google.maps.Marker({
-                        map: map,
-                        icon: icon,
-                        title: place.name,
-                        position: place.geometry.location
-                    }));
+                    markers.forEach(function (marker) {
+                        marker.setMap(null);
+                    });
+                    markers = [];
+                    var bounds = new google.maps.LatLngBounds();
+                    places.forEach(function (place) {
+                        if (!place.geometry) {
+                            console.log("Returned place contains no geometry");
+                            return;
+                        }
+                        var icon = {
+                            url: place.icon,
+                            size: new google.maps.Size(71, 71),
+                            origin: new google.maps.Point(0, 0),
+                            anchor: new google.maps.Point(17, 34),
+                            scaledSize: new google.maps.Size(25, 25)
+                        };
+                        markers.push(new google.maps.Marker({
+                            map: map,
+                            icon: icon,
+                            title: place.name,
+                            position: place.geometry.location
+                        }));
 
-                    if (place.geometry.viewport) {
-                        bounds.union(place.geometry.viewport);
-                    } else {
-                        bounds.extend(place.geometry.location);
+                        if (place.geometry.viewport) {
+                            bounds.union(place.geometry.viewport);
+                        } else {
+                            bounds.extend(place.geometry.location);
+                        }
+                    });
+                    map.fitBounds(bounds);
+                }, true);
+            }
+            async function showTheater() {
+                var input = document.getElementById('pac-input');
+                var searchBox = new google.maps.places.SearchBox(input);
+                map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
+                await map.addListener('bounds_changed', function () {
+                    searchBox.setBounds(map.getBounds());
+                }, true);
+                var markers = [];
+                await searchBox.addListener('places_changed', function () {
+                    var places = searchBox.getPlaces();
+                    if (places.length == 0) {
+                        return;
                     }
-                });
-                map.fitBounds(bounds);
-            }, true);
-        }
-        async function showTheater() {
-            var input = document.getElementById('pac-input');
-            var searchBox = new google.maps.places.SearchBox(input);
-            map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
-            await map.addListener('bounds_changed', function () {
-                searchBox.setBounds(map.getBounds());
-            }, true);
-            var markers = [];
-            await searchBox.addListener('places_changed', function () {
-                var places = searchBox.getPlaces();
-                if (places.length == 0) {
-                    return;
-                }
-                markers.forEach(function (marker) {
-                    marker.setMap(null);
-                });
-                markers = [];
-                var bounds = new google.maps.LatLngBounds();
-                places.forEach(function (place) {
-                    var icon = {
-                        url: place.icon,
-                        size: new google.maps.Size(71, 71),
-                        origin: new google.maps.Point(0, 0),
-                        anchor: new google.maps.Point(17, 34),
-                        scaledSize: new google.maps.Size(25, 25)
-                    };
-                    markers.push(new google.maps.Marker({
-                        map: map,
-                        icon: icon,
-                        title: place.name,
-                        position: place.geometry.location
-                    }));
-                    if (place.geometry.viewport) {
-                        bounds.union(place.geometry.viewport);
-                    } else {
-                        bounds.extend(place.geometry.location);
-                    }
-                });
-                map.fitBounds(bounds);
-            }, true);
-        }
-    </script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDczdG1SR1G3ajdQS3d-6-ZlR015Gi15mQ&libraries=places&callback=initAutocomplete"
-        async defer></script>
-    <script src="app.js"></script>
-    <script src="mapShow.js" defer></script>
-
-
-
+                    markers.forEach(function (marker) {
+                        marker.setMap(null);
+                    });
+                    markers = [];
+                    var bounds = new google.maps.LatLngBounds();
+                    places.forEach(function (place) {
+                        var icon = {
+                            url: place.icon,
+                            size: new google.maps.Size(71, 71),
+                            origin: new google.maps.Point(0, 0),
+                            anchor: new google.maps.Point(17, 34),
+                            scaledSize: new google.maps.Size(25, 25)
+                        };
+                        markers.push(new google.maps.Marker({
+                            map: map,
+                            icon: icon,
+                            title: place.name,
+                            position: place.geometry.location
+                        }));
+                        if (place.geometry.viewport) {
+                            bounds.union(place.geometry.viewport);
+                        } else {
+                            bounds.extend(place.geometry.location);
+                        }
+                    });
+                    map.fitBounds(bounds);
+                }, true);
+            }
+        </script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDczdG1SR1G3ajdQS3d-6-ZlR015Gi15mQ&libraries=places&callback=initAutocomplete"
+            async defer></script>
+        <script src="app.js"></script>
+        <script src="mapShow.js" defer></script>
+        
+    </div>
     <footer></footer>
 </body>
 
