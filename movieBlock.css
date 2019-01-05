@@ -1,0 +1,334 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+
+header .block{
+  width: 100%;
+  height: 450px;
+  background-image: url(https://firebasestorage.googleapis.com/v0/b/wpproject-39c2f.appspot.com/o/background2.png?alt=media&token=0ca6113b-6593-41b6-95a8-692ae3ce61af);
+  background-repeat:no-repeat;
+  background-size: cover;
+  background-position:center;
+  background-attachment: fixed;
+  display: flex;
+  Justify-content: center;
+  align-items: center;
+  /* box-shadow:inset 0 0 2px 2px rgba(0,0,0,0.6); */
+}
+header .block h1{
+  font-size:70px;
+  font-weight: bold;
+  color: aliceblue;
+  transition: 1s;
+  text-shadow:2px 2px 2px rgba(0,0,0,0.6);
+}
+.bord_box{
+  height: 50px;
+  width: 100%;
+  position: -webkit-sticky;
+  position: sticky;
+  background-color: black;
+  opacity: 0.9;
+  top: 0px;
+  display: flex;
+  Justify-content: space-between;
+  align-items: center;
+  box-shadow:0 0 2px 2px rgba(0,0,0,0.6);
+}
+.bord_box form{
+  height: 100%;
+  /* margin-left: -50px; */
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.bord_box form .text{
+  margin: 0 0 0 15px;
+  opacity: 0.6;
+  border: 0;
+  width: 55%;
+  border-radius:10px;
+  height: 45%;
+}
+.bord_box form .sub{
+  border: 0;
+  height: 100%;
+  width: 50px;
+  box-sizing: border-box;
+  padding: 10px 10px;
+  background-color: black;
+}
+.bord_box form .sub:hover{
+  transition: 0.5s;
+  background-color: navy;
+  color: coral;
+}
+.bord_box .Tmap{
+  height: 100%;
+  margin-right: 15px;
+}
+.bord_box .Tmap input{
+  border: 0;
+  height: 100%;
+  color: white;
+  background-color: black;
+  padding: 0 5px;
+  font-weight: bold;
+}
+.bord_box .Tmap input:hover{
+  transition: 0.5s;
+  background-color: navy;
+  color: white;
+  opacity: 1;
+}
+
+h2{
+  text-align: center;
+  font-size: 40px;
+  line-height: 70px;
+  transition: 1s;
+  font-weight: bold;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+@media screen and (max-width: 500px){
+  header .block h1{
+    font-size:45px;
+    transition: 1s;
+  }
+  h2{
+    font-size: 30px;
+    line-height: 50px;
+  }
+}
+@media screen and (max-width: 300px){
+  header .block h1{
+    font-size:20px;
+  }
+  h2{
+    font-size: 20px;
+    line-height: 40px;
+  }
+}
+
+
+.movieWrap{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.movie_{
+    width:50%;
+    flex-direction:row;
+    /* border: 1px solid red; */
+    display:inline-flex;
+    justify-content: center;
+    margin-bottom: 40px;
+    /* background: linear-gradient(-20deg, transparent 200px, #58a 0) right; */
+    box-shadow: 0 0 2px 2px rgba(0,0,0,0.6);
+  }
+.movie_img, .movie_context{
+  width: 30%;
+  margin: 10px;
+  /* border: 1px solid black; */
+}
+.movie_context{
+  width: 70%;
+  position: relative;
+  
+}
+ 
+img{
+  width:100%;
+}
+
+.movie_title, .movie_info{
+  flex: none;
+  /* border: 1px solid black; */
+  display: inline-block;
+  width: 100%;
+  word-break: break-word;
+}
+.movie_title{
+  /* position: absolute;
+  top: 0; */
+  padding: 2% 0 0 3%;
+  font-size: 24px;
+  font-weight: bold;
+  font-size:25px;
+
+}
+.movie_title a{
+  text-decoration:none;
+  display:block;
+  color:black;
+}
+.movie_time{
+  margin: 3% 0 0 3%;
+  font-size: 16px;
+}
+.movie_score{
+  margin: 1.5% 0 0 3%;
+  font-size: 16px;
+}
+.movie_info{
+  /* position: absolute;
+  top: 20%; */
+  margin: 5% 0 0 3%;
+  font-size: 16px;
+  line-height: 26px;
+}
+.movie_info h3{
+  margin-bottom:1.5%;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.tmdb-result{
+  background: linear-gradient(-20deg, transparent 400px, #58a 0) right;
+}
+
+
+
+#map-view {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 99;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#map-view .map {
+  max-height: 100%;
+  max-width: 100%;
+}
+
+#map-view #map{
+  border: 10px solid white;
+  border-radius: 7.5px;
+}
+
+#map-view svg{
+  height: 5%;
+  position: absolute;
+  top:15px;
+  right:15px;
+}
+
+#map-view.hidden {
+  display: none;
+}
+
+footer{
+  width: 100%;
+  background-color: black;
+  opacity: 0.9;
+  height: 30px;
+  box-shadow: 0 0 2px 2px rgba(0,0,0,0.6);
+}
+
+
+.goToTop {
+  display: none;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  z-index: 98;
+  font-size: 14px;
+  border: none;
+  outline: none;
+  background-color: red;
+  color: white;
+  cursor: pointer;
+  text-align: center;
+  width: 5%;
+  padding: 15px;
+  border-radius: 14px;
+  transition: 0.5s;
+}
+
+.goToTop:hover {
+  background-color: #555;
+}
+.backToMainForSearch {
+  display: none;
+  position: fixed;
+  bottom: 60px;
+  right: 10px;
+  z-index: 98;
+  font-size: 14px;
+  border: none;
+  outline: none;
+  background-color: red;
+  color: white;
+  cursor: pointer;
+  width: 5%;
+  text-align: center;
+  padding: 15px;
+  border-radius: 14px;
+  transition: 0.5s;
+}
+
+.backToMainForSearch:hover {
+  background-color: #555;
+}
+
+@media screen and (min-width: 1000px){
+  .backToMainForSearch{
+    width: 50px;
+  }
+  .goToTop{
+    width: 50px;
+  }
+}
