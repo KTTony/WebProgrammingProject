@@ -48,6 +48,7 @@ async function movieResult(source, poster, name, year, overview, id, score) {
     movieInfo.appendChild(infoitem);
 
     resultT.appendChild(movieInfo);
+    await ifSearchNone();
 }
 
 function search(e) {
@@ -98,6 +99,13 @@ async function ifNoZHTW(overview, id) {
         xhr.send();
     }
 }
+async function ifSearchNone(){
+    if(document.querySelector(".tmdb-result .movie_ .movie_context a").textContent==""){
+        var noneSearch = document.createElement("H2");
+        noneSearch.innerHTML=""
+        resultT.appendChild()
+    }
+}
 
 form.addEventListener("submit", search);
 
@@ -115,7 +123,7 @@ function scrollFunction() {
 document.querySelector(".backToMainForSearch").addEventListener("click", () => {
     document.querySelector(".tmdb-result").innerHTML = "";
     document.querySelector(".backToMainForSearch").style.display = "none";
-    document.querySelector(".movieWrap").style.display = "block";
+    document.querySelector(".movieWrap").style.display = "flex";
     document.querySelector('body').scrollIntoView({ behavior: 'smooth', block: 'start' });
 });
 document.querySelector(".goToTop").addEventListener("click", () => {

@@ -45,14 +45,21 @@ table {
 
 body{
   position: relative;
+  background: linear-gradient(-20deg, transparent 300px, #02558B 0) bottom right;
+  /* url(https://firebasestorage.googleapis.com/v0/b/wpproject-39c2f.appspot.com/o/background2.png?alt=media&token=0ca6113b-6593-41b6-95a8-692ae3ce61af); */
+  background-attachment: fixed;
+}
+header{
+  height: 45vh;
 }
 header .block{
   width: 100%;
-  height: 450px;
+  /* height: 450px; */
+  height: 100%;
   background-image: url(https://firebasestorage.googleapis.com/v0/b/wpproject-39c2f.appspot.com/o/background2.png?alt=media&token=0ca6113b-6593-41b6-95a8-692ae3ce61af);
   background-repeat:no-repeat;
   background-size: cover;
-  background-position:center;
+  background-position:top;
   background-attachment: fixed;
   display: flex;
   Justify-content: center;
@@ -71,13 +78,13 @@ header .block h1{
   width: 100%;
   position: -webkit-sticky;
   position: sticky;
-  background-color: black;
-  opacity: 0.9;
+  background-color: rgba(0,0,0,0.45);
+  /* opacity: 0.9; */
   top: 0px;
   display: flex;
   Justify-content: space-between;
   align-items: center;
-  box-shadow:0 0 2px 2px rgba(0,0,0,0.6);
+  box-shadow:0 0 2px 2px rgba(2, 2, 2, 0.6);
 }
 .bord_box form{
   height: 100%;
@@ -100,7 +107,6 @@ header .block h1{
   width: 50px;
   box-sizing: border-box;
   padding: 10px 10px;
-  background-color: black;
 }
 .bord_box form .sub:hover{
   transition: 0.5s;
@@ -111,15 +117,14 @@ header .block h1{
   height: 100%;
   margin-right: 15px;
 }
-.bord_box .Tmap input{
-  border: 0;
-  height: 100%;
+.bord_box .Tmap p{
   color: white;
-  background-color: black;
-  padding: 0 5px;
+  text-align: center;
+  padding: 0 7px;
+  line-height: 50px;
   font-weight: bold;
 }
-.bord_box .Tmap input:hover{
+.bord_box .Tmap:hover{
   transition: 0.5s;
   background-color: navy;
   color: white;
@@ -134,8 +139,17 @@ h2{
   font-weight: bold;
   margin-top: 10px;
   margin-bottom: 20px;
+  color: white;
+  text-shadow:1px 1px 1.5px rgba(0,0,0,0.8);
 }
+@media screen and (max-width: 825px){
+  header .block{
+    background-repeat:no-repeat;
+    background-size: cover;
+    /* background-position:center; */
 
+  }
+}
 @media screen and (max-width: 500px){
   header .block h1{
     font-size:45px;
@@ -158,6 +172,8 @@ h2{
 
 .main{
   padding-bottom: 50px;
+  min-height: 100vh;
+  /* background: linear-gradient(-20deg, transparent 200px, #58a 0) right; */
 }
 .movieWrap{
   display:flex;
@@ -235,7 +251,7 @@ img{
 }
 
 .tmdb-result{
-  background: linear-gradient(-20deg, transparent 400px, #58a 0) right;
+  /* background: linear-gradient(-20deg, transparent 400px, #58a 0) right; */
   display:flex;
   flex-direction: column;
   justify-content: center;
@@ -280,7 +296,7 @@ footer{
   background-color: black;
   opacity: 0.9;
   height: 30px;
-  box-shadow: 0 0 2px 2px rgba(0,0,0,0.6);
+  box-shadow: 0 0 0.5px 2px rgba(3, 3, 3, 0.6);
   box-sizing: border-box;
   position: absolute;
   bottom: 0;
