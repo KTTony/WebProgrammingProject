@@ -46,7 +46,8 @@ table {
 body{
   font-family: 'Noto Serif TC', serif;
   position: relative;
-  background: linear-gradient(-20deg, transparent 300px, rgba(235,122,119,1) ) bottom right;
+  background-color: #0089A7;
+  /* background: linear-gradient(-20deg, transparent 300px, rgba(235,122,119,1) ) bottom right; */
   /* url(https://firebasestorage.googleapis.com/v0/b/wpproject-39c2f.appspot.com/o/background2.png?alt=media&token=0ca6113b-6593-41b6-95a8-692ae3ce61af); */
   background-attachment: fixed;
 }
@@ -174,7 +175,7 @@ h2{
 .main{
   padding-bottom: 50px;
   min-height: 100vh;
-  background: linear-gradient(-20deg, transparent 300px, rgba(235,122,119,1) ) bottom right;
+  background: linear-gradient(-20deg,  rgba(235,122,119,1),#0089A7 ) bottom right;
   background-attachment: fixed;
   /* background: linear-gradient(-20deg, transparent 200px, #58a 0) right; */
 }
