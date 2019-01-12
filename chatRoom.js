@@ -9,30 +9,61 @@ var config = {
 firebase.initializeApp(config);
 
 var chatRoom = firebase.database().ref('chatRoom');
-
-chatRoom.once('value', function (snapshot) {
-    var test = snapshot.val()
-    console.log(test);
-    for (const i in test) {
-        console.log(i);
-    }
+document.querySelector("footer .aboutButton").addEventListener('click',()=>{
+    document.querySelector("header").style.display = "none";
+    document.querySelector(".tmdb-result").innerHTML = "";
+    document.querySelector(".aboutUS").style.display = "flex";
+    document.querySelector(".backToMain").style.display = "block";
+    document.querySelector(".movieWrap").style.display = "none";
+    document.querySelector('body').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    var textBox = document.querySelector(".textBox");
+    textBox.scrollTop = textBox.scrollHeight;
 })
 
-// chatRoom.on('value', function (snapshot) {
-//     console.log('資料被更新了，資料內容是' + snapshot.val())
-// })
+
+
+chatRoom.on('value', async function (snapshot) {
+    var test = snapshot.val();
+    var textBox = document.querySelector(".textBox");
+    textBox.innerHTML="";
+    for (const i in test) {
+        var middunSpace = document.createElement("div");
+        var chatMessageWrap = document.createElement("div");
+        chatMessageWrap.style = "display: flex;";
+        middunSpace.classList.add('middunSpace');
+        middunSpace.textContent = " : ";
+        chatRoom.child(i).child('name').once('value', function (ele) {
+            var nameInChat = document.createElement("div");
+            nameInChat.textContent = ele.val();
+            nameInChat.classList.add('nameInChat');
+            var textInChat = document.createElement("div");
+            chatRoom.child(i).child('text').once('value', function (e) {
+                textInChat.textContent = e.val();
+                textInChat.classList.add('textInChat');
+            })
+
+            chatMessageWrap.appendChild(nameInChat);
+            chatMessageWrap.appendChild(middunSpace);
+            chatMessageWrap.appendChild(textInChat);
+            textBox.appendChild(chatMessageWrap);
+        })
+    }
+    textBox.scrollTop = textBox.scrollHeight;
+})
+
 
 
 
 function chatBox() {
     var name = document.querySelector("#chatName").value;
     var writeText = document.querySelector("#chatText").value;
-    var createText = chatRoom.push();
+    if(name!=""&&writeText!=""){
+        var createText = chatRoom.push();
     createText.set({
         "name": name,
         "text": writeText
     });
-    // chatRoom.once('value', function (snapshot) {
-    //     console.log(snapshot.val());
-    // })
+    document.querySelector("#chatName").value="";
+    document.querySelector("#chatText").value="";
+    }
 }

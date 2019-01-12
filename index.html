@@ -27,7 +27,7 @@
         </div>
     </div>
     <div class="goToTop">TOP</div>
-    <div class="backToMainForSearch">回首頁</div>
+    <div class="backToMain">回首頁</div>
     <div class="main">
         <style>
             #map {
@@ -223,31 +223,60 @@
                 }, true);
             }
         </script>
-        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDczdG1SR1G3ajdQS3d-6-ZlR015Gi15mQ&libraries=places&callback=initAutocomplete"
-            async defer></script>
-        <script src="app.js"></script>
-        <script src="mapShow.js" defer></script>
 
-
-
-        <div class="chatRoom">
-            <input type="text" name="" id="chatName" placeholder=" 輸入你的暱稱">
-            <input type="text" name="" id="chatText" placeholder=" say something">
-            <input class="sub" type="image" alt="Login" onclick="chatBox()" src="https://fakeimg.pl/50/">
+        <div class="aboutUS">
+            <h2>About Us</h2>
+            <div class="aboutBox">
+                <p>這是一個蒐集電影簡介的網站，</br>提供想要得到電影資訊的人們能夠瀏覽電影資訊，</br>在主畫面中會有幾個目前的熱門電影資訊卡，</br>點擊電影名即可看到完整資訊內容，</br>我們使用TMBd所提供的API來做電影簡介搜尋功能，使用者可以尋找自己想查詢的電影內容，</br>google
+                    map可以搜尋電影院位置(你尋找其他的地點也行)，</br>感謝瀏覽我們的網站，祝您有個美好的一天</p>
+            </div>
+            <h2>TEAM</h2>
+            <div class="usWrap">
+                <div class="usBox">
+                    <h3>KTony</h3>
+                    <h4>我是誰? 這裡是哪裡? 我在做什麼?</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem excepturi sequi cumque hic amet
+                        sint, vero eveniet maiores ipsum eius, laborum corporis facere inventore dolores provident
+                        nihil distinctio reprehenderit. Vero ea quaerat facere, ex laudantium dolorum voluptatem neque
+                        harum. Hic tenetur, quasi corporis ad ipsum nisi fugiat rerum beatae facilis.</p>
+                </div>
+                <div class="usBox">
+                    <h3></h3>
+                    <h4></h4>
+                    <p></p>
+                </div>
+                <div class="usBox">
+                    <h3></h3>
+                    <h4></h4>
+                    <p></p>
+                </div>
+            </div>
+            <div class="chatRoom">
+                <h3>有什麼想說的都可以寫在這裡喔</h3>
+                <div class="textBox">
+                </div>
+                <div class="chatInput">
+                    <input type="text" name="" id="chatName" placeholder=" 輸入暱稱">
+                    <input type="text" name="" id="chatText" placeholder=" say something">
+                    <input class="sub" type="button" onclick="chatBox()" value="送出">
+                </div>
+            </div>
         </div>
-
-
 
     </div>
 
+    <footer>
+        <nav class="time">2019.1</nav>
+        <nav class="aboutButton">About Us</nav>
+    </footer>
 
-
-
-
-
-    <footer></footer>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDczdG1SR1G3ajdQS3d-6-ZlR015Gi15mQ&libraries=places&callback=initAutocomplete"
+        async defer></script>
+    <script src="app.js"></script>
+    <script src="mapShow.js" defer></script>
     <script src="https://www.gstatic.com/firebasejs/5.7.3/firebase.js" defer></script>
     <script src="chatRoom.js" defer></script>
+    <script src="scroll.js"></script>
 </body>
 
 </html>

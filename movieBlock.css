@@ -43,16 +43,19 @@ table {
 }
 
 
+body::-webkit-scrollbar {
+  display: none;
+}
 body{
   font-family: 'Noto Serif TC', serif;
   position: relative;
-  background-color: #0089A7;
-  /* background: linear-gradient(-20deg, transparent 300px, rgba(235,122,119,1) ) bottom right; */
-  /* url(https://firebasestorage.googleapis.com/v0/b/wpproject-39c2f.appspot.com/o/background2.png?alt=media&token=0ca6113b-6593-41b6-95a8-692ae3ce61af); */
+  -ms-overflow-style: none;
+  background: linear-gradient(-20deg,  rgba(235,122,119,1),#0089A7 ) bottom right;
   background-attachment: fixed;
 }
 header{
   height: 45vh;
+  display: block;
 }
 header .block{
   width: 100%;
@@ -144,40 +147,13 @@ h2{
   color: white;
   text-shadow:1px 1px 1.5px rgba(0,0,0,0.8);
 }
-@media screen and (max-width: 825px){
-  header .block{
-    background-repeat:no-repeat;
-    background-size: cover;
-    /* background-position:center; */
 
-  }
-}
-@media screen and (max-width: 500px){
-  header .block h1{
-    font-size:45px;
-    transition: 1s;
-  }
-  h2{
-    font-size: 30px;
-    line-height: 50px;
-  }
-}
-@media screen and (max-width: 300px){
-  header .block h1{
-    font-size:20px;
-  }
-  h2{
-    font-size: 20px;
-    line-height: 40px;
-  }
-}
 
 .main{
   padding-bottom: 50px;
   min-height: 100vh;
   background: linear-gradient(-20deg,  rgba(235,122,119,1),#0089A7 ) bottom right;
   background-attachment: fixed;
-  /* background: linear-gradient(-20deg, transparent 200px, #58a 0) right; */
 }
 .movieWrap{
   display:flex;
@@ -186,16 +162,16 @@ h2{
   align-items: center;
 }
 .movie_{
-    width:50%;
-    flex-direction:row;
-    /* border: 1px solid red; */
-    display:inline-flex;
-    justify-content: center;
-    margin: 20px;
-    padding: 5px;
-    background-color: white;
-    /* background: linear-gradient(-20deg, transparent 200px, #58a 0) right; */
-    box-shadow: 0 0 1.5px 2px rgba(4,4,4,0.6);
+  transition: 0.7s;
+  width:55%;
+  flex-direction:row;
+  /* border: 1px solid red; */
+  display:inline-flex;
+  justify-content: center;
+  margin: 20px;
+  padding: 5px;
+  background-color: white;
+  box-shadow: 0 0 1.5px 2px rgba(4,4,4,0.6);
   }
 .movie_img, .movie_context{
   width: 30%;
@@ -295,6 +271,106 @@ img{
   display: none;
 }
 
+.aboutUS{
+  color: rgba(55, 55, 55, 1);
+  display:none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.aboutUS .aboutBox{
+  text-align: center;
+  font-size: 20px;
+  line-height: 30px;
+  margin: 50px;
+  padding: 10px;
+  border-radius:10px;
+  background-color: rgb(255, 255, 255,0.45);
+}
+.aboutUS .usWrap{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.aboutUS .usWrap .usBox{
+  text-align: center;
+  font-size: 20px;
+  line-height: 30px;
+  max-width: 80%;
+  margin: 50px;
+  padding: 10px;
+  border-radius:10px;
+  background-color: rgb(255, 255, 255,0.45);
+}
+.aboutUS .usWrap .usBox h3{
+  font-size: 30px;
+  line-height: 42px;
+  font-weight: bold;
+}
+.aboutUS .usWrap .usBox h4{
+  font-size: 15px;
+  line-height: 30px;
+  font-weight: bold;
+}
+.aboutUS .usWrap .usBox p{
+
+}
+
+.chatRoom{
+  width: 60%;
+  margin: 50px;
+  padding: 10px;
+  border-radius:10px;
+  background-color: rgb(255, 255, 255,0.45);
+}
+.chatRoom h3{
+  font-size: 30px;
+  line-height: 42px;
+  text-align: center;
+}
+.chatInput{
+  padding:5px;
+  display: flex;
+  Justify-content: space-between;
+}
+.chatInput #chatName{
+  width: 30%;
+  border: none;
+  opacity: 0.8;
+  line-height: 20px;
+}
+.chatInput #chatText{
+  width: 50%;
+  border: none;
+  opacity: 0.8;
+  line-height: 20px;
+}
+.chatInput .sub{
+  width: 15%;
+  border: none;
+  color: white;
+  text-align: center;
+  padding: 2px;
+  font-weight: bold;
+  background-color: rgba( 120, 120, 120, 0.8);
+  border-radius: 7px;
+}
+.textBox::-webkit-scrollbar{
+  display:none;
+}
+.textBox{
+  padding: 0 5px;
+  overflow-y: scroll;
+  height: 150px;
+}
+.textBox .nameInChat{
+  font-weight: bold;
+}
+.textBox .middunSpace{
+  margin: 0 6px 8px 2px;
+}
+
 footer{
   width: 100%;
   background-color: black;
@@ -305,8 +381,28 @@ footer{
   position: absolute;
   bottom: 0;
   width: 100%;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  color:  white;
+  padding: 0 10px;
 }
-
+footer .time{
+  display: inline-block;
+  width: 70%;
+  margin-left: 15%;
+  text-align: center;
+}
+footer .aboutButton{
+  width: 15%;
+  text-align: right;
+  display: inline-block;
+  transition: 0.6s;
+}
+footer .aboutButton:hover{
+  color:#F19483;
+}
 
 .goToTop {
   display: none;
@@ -330,7 +426,7 @@ footer{
 .goToTop:hover {
   background-color: #555;
 }
-.backToMainForSearch {
+.backToMain{
   display: none;
   position: fixed;
   bottom: 60px;
@@ -349,12 +445,49 @@ footer{
   transition: 0.5s;
 }
 
-.backToMainForSearch:hover {
+.backToMain:hover {
   background-color: #555;
 }
 
+
+@media screen and (max-width: 825px){
+  .movie_{
+    width:70%;
+  }
+  header .block{
+    background-repeat:no-repeat;
+    background-size: cover;
+    /* background-position:center; */
+
+  }
+}
+@media screen and (max-width: 500px){
+  header .block h1{
+    font-size:45px;
+    transition: 1s;
+  }
+  .movie_{
+    width:80%;
+  }
+  h2{
+    font-size: 30px;
+    line-height: 50px;
+  }
+}
+@media screen and (max-width: 300px){
+  header .block h1{
+    font-size:20px;
+  }
+  .movie_{
+    width:90%;
+  }
+  h2{
+    font-size: 20px;
+    line-height: 40px;
+  }
+}
 @media screen and (min-width: 1000px){
-  .backToMainForSearch{
+  .backToMain{
     width: 50px;
   }
   .goToTop{

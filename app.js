@@ -52,10 +52,11 @@ async function movieResult(source, poster, name, year, overview, id, score) {
 }
 
 function search(e) {
-    document.querySelector(".backToMainForSearch").style.display = "block";
+    document.querySelector(".backToMain").style.display = "block";
+    document.querySelector("header").style.display = "none";
     document.querySelector(".movieWrap").style.display = "none";
     e.preventDefault();
-    resultT.innerHTML = "";
+    resultT.innerHTML = "<h2>搜尋結果</h2>";
     var searchTitle = input.value;
     makeTRequest(searchTitle);
     input.value = "";
@@ -108,54 +109,3 @@ async function ifSearchNone(){
 }
 
 form.addEventListener("submit", search);
-
-
-
-window.onscroll = function () { scrollFunction() };
-function scrollFunction() {
-    scrollButton();
-    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-        document.querySelector(".goToTop").style.display = "block";
-    } else {
-        document.querySelector(".goToTop").style.display = "none";
-    }
-}
-document.querySelector(".backToMainForSearch").addEventListener("click", () => {
-    document.querySelector(".tmdb-result").innerHTML = "";
-    document.querySelector(".backToMainForSearch").style.display = "none";
-    document.querySelector(".movieWrap").style.display = "flex";
-    document.querySelector('body').scrollIntoView({ behavior: 'smooth', block: 'start' });
-});
-document.querySelector(".goToTop").addEventListener("click", () => {
-    document.querySelector('body').scrollIntoView({ behavior: 'smooth', block: 'start' });
-});
-
-function getScrollHeight() {
-    var scrollHeight = 0, bodyScrollHeight = 0, documentScrollHeight = 0;
-    if (document.body) {
-        bodyScrollHeight = document.body.scrollHeight;
-    }
-    if (document.documentElement) {
-        documentScrollHeight = document.documentElement.scrollHeight;
-    }
-    scrollHeight = (bodyScrollHeight - documentScrollHeight > 0) ? bodyScrollHeight : documentScrollHeight; return scrollHeight;
-}
-
-function getWindowHeight() {
-    var windowHeight = 0; if (document.compatMode == "CSS1Compat") {
-        windowHeight = document.documentElement.clientHeight;
-    } else {
-        windowHeight = document.body.clientHeight;
-    }
-    return windowHeight;
-}
-function scrollButton(){
-    if(document.documentElement.scrollTop>getScrollHeight()-getWindowHeight()-35){
-        document.querySelector(".backToMainForSearch").style.bottom="90px"
-        document.querySelector(".goToTop").style.bottom="40px"
-    }
-    else{
-        document.querySelector(".backToMainForSearch").style.bottom="60px"
-        document.querySelector(".goToTop").style.bottom="10px"
-    }
-}
