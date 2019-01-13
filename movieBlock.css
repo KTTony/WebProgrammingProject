@@ -422,7 +422,6 @@ footer .aboutButton:hover{
   border-radius: 14px;
   transition: 0.5s;
 }
-
 .goToTop:hover {
   background-color: #555;
 }
@@ -473,6 +472,17 @@ footer .aboutButton:hover{
     font-size: 30px;
     line-height: 50px;
   }
+  footer{
+    font-size: 14px;
+    line-height: 30px;
+    padding-bottom: 8px;
+  }
+  .backToMain{
+    padding: 10px 15px;
+  }
+  .goToTop{
+    padding: 10px 15px;
+  }
 }
 @media screen and (max-width: 300px){
   header .block h1{
@@ -484,6 +494,12 @@ footer .aboutButton:hover{
   h2{
     font-size: 20px;
     line-height: 40px;
+  }
+  .backToMain{
+    padding: 5px 15px;
+  }
+  .goToTop{
+    padding: 5px 15px;
   }
 }
 @media screen and (min-width: 1000px){
