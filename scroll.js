@@ -13,11 +13,9 @@ document.querySelector(".backToMain").addEventListener("click", () => {
     document.querySelector(".aboutUS").style.display = "none";
     document.querySelector(".movieWrap").style.display = "flex";
     document.querySelector("header").style.display = "block";
-    console.log(document.querySelector("#one").classList)
-    document.querySelector("#one").classList.add('hidden');
-    document.querySelector("#two").classList.add('hidden');
-    document.querySelector("#three").classList.add('hidden');
-    console.log(document.querySelector("#one").classList)
+    document.querySelector("#one").style.display = "none";
+    document.querySelector("#two").style.display = "none";
+    document.querySelector("#three").style.display = "none";
     document.querySelector('body').scrollIntoView({ behavior: 'smooth', block: 'start' });
 });
 document.querySelector(".goToTop").addEventListener("click", () => {

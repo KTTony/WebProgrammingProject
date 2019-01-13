@@ -240,6 +240,14 @@ img{
 /* #one.movieWrap, #two.movieWrap, #three.movieWrap{
 	display: none;
 } */
+
+#one,#two,#three{
+  display:none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .movie_main{
 	width: 75%;
 	/* display:flex; */
@@ -395,13 +403,6 @@ b{
 .no-scroll{
 	overflow: hidden;
 }
-
-#one.hidden,
-#two.hidden,
-#three.hidden{
-	display: none;
-}
-
 
 #map-view {
   position: fixed;
