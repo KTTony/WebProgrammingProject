@@ -13,6 +13,11 @@ document.querySelector(".backToMain").addEventListener("click", () => {
     document.querySelector(".aboutUS").style.display = "none";
     document.querySelector(".movieWrap").style.display = "flex";
     document.querySelector("header").style.display = "block";
+    console.log(document.querySelector("#one").classList)
+    document.querySelector("#one").classList.add('hidden');
+    document.querySelector("#two").classList.add('hidden');
+    document.querySelector("#three").classList.add('hidden');
+    console.log(document.querySelector("#one").classList)
     document.querySelector('body').scrollIntoView({ behavior: 'smooth', block: 'start' });
 });
 document.querySelector(".goToTop").addEventListener("click", () => {
@@ -39,9 +44,9 @@ function getWindowHeight() {
     return windowHeight;
 }
 function scrollButton(){
-    var scorllm = Math.round((document.documentElement.scrollTop/(getScrollHeight()-getWindowHeight()))*100)
-    document.querySelector("body").style.background = "linear-gradient(-20deg,  rgba("+ Math.round(235-1.57*scorllm) +","+ Math.round(122+0.56*scorllm) +","+ Math.round(119+1.01*scorllm) +",1),rgba("+ Math.round(0+2.38*scorllm) +","+ Math.round(137+0.32*scorllm) +","+ Math.round(167+0.02*scorllm) +",1) ) bottom right";
-    document.querySelector(".main").style.background = "linear-gradient(-20deg,  rgba("+ Math.round(235-1.57*scorllm) +","+ Math.round(122+0.56*scorllm) +","+ Math.round(119+1.01*scorllm) +",1),rgba("+ Math.round(0+2.38*scorllm) +","+ Math.round(137+0.32*scorllm) +","+ Math.round(167+0.02*scorllm) +",1) ) bottom right";
+    var scorllm = Math.round((document.documentElement.scrollTop/(getScrollHeight()-getWindowHeight()))*100);     
+    // document.querySelector("body").style.background-color = "rgba("+ Math.round(235-1.57*scorllm) +","+ Math.round(122+0.56*scorllm) +","+ Math.round(119+1.01*scorllm) +",1),rgba("+ Math.round(0+2.38*scorllm) +","+ Math.round(137+0.32*scorllm) +","+ Math.round(167+0.02*scorllm) +",1) ) bottom right";
+    document.querySelector(".main").style.background = "linear-gradient(-20deg,  rgba("+ Math.round(235-0.91*scorllm) +","+ Math.round(122+0.96*scorllm) +","+ Math.round(119-1.17*scorllm) +",0.75),rgba("+ Math.round(218-2.18*scorllm) +","+ Math.round(201-0.68*scorllm) +","+ Math.round(166+0.01*scorllm) +",1) ) bottom right";
     if(document.documentElement.scrollTop>getScrollHeight()-getWindowHeight()-35){
         document.querySelector(".backToMain").style.bottom="90px"
         document.querySelector(".goToTop").style.bottom="40px"

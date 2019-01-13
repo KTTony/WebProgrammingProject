@@ -74,6 +74,9 @@ async function makeTRequest(searchTitle) {
         response.map(async function (item) {
             urlE = "https://api.themoviedb.org/3/movie/" + item.id + "?api_key=" + apiKey;
             ifNoZHTW(item.overview, item.id);
+            if(item.overview.length>200){
+                item.overview=item.overview.substr(0,200)+"......";
+            }
             await movieResult(
                 "tmdb",
                 "https://image.tmdb.org/t/p/w300" + item.poster_path,
@@ -94,6 +97,9 @@ async function ifNoZHTW(overview, id) {
         xhr = new XMLHttpRequest();
         xhr.onload = function () {
             var response = JSON.parse(this.responseText);
+            if(response.overview.length>200){
+                response.overview=response.overview.substr(0,200)+"......";
+            }
             document.getElementById(id).querySelector("p").innerHTML = response.overview;
         };
         xhr.open("GET", urlE, true);
