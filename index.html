@@ -118,19 +118,24 @@
                     </div>
                 </div>
             </div>
-            <script src="http://code.jquery.com/jquery-latest.min.js"></script>
-            <script>
-                $(function () {
-                    var len = 200; // 超過50個字以"..."取代
-                    $(".JQellipsis").each(function (i) {
-                        if ($(this).text().length > len) {
-                            $(this).attr("title", $(this).text());
-                            var text = $(this).text().substring(0, len - 1) + "...";
-                            $(this).text(text);
-                        }
-                    });
-                });
-            </script>
+            <!-- <script src="http://code.jquery.com/jquery-latest.min.js"></script> -->
+            <!-- <script>
+                var text200 = document.querySelectorAll("JQellipsis");
+                for(let i=0;i<text200.length;i++){
+                    var path = text200[i].textContent;
+                    text200[i].textContent=path.substr(0,200)+"......";
+                }
+                // $(function () {
+                //     var len = 200; // 超過50個字以"..."取代
+                //     $(".JQellipsis").each(function (i) {
+                //         if ($(this).text().length > len) {
+                //             $(this).attr("title", $(this).text());
+                //             var text = $(this).text().substring(0, len - 1) + "...";
+                //             $(this).text(text);
+                //         }
+                //     });
+                // });
+            </script> -->
             <div id="movie_two" class="movie_">
                 <div class="movie_img">
                     <img src="https://image.tmdb.org/t/p/w600_and_h900_bestv2/AjH3bX7FHYFba5YkC9utitpErST.jpg">

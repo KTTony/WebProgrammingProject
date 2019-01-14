@@ -2,8 +2,6 @@ const videoOne = document.getElementById("one").querySelector('div #video_view')
 const videoTwo = document.getElementById("two").querySelector('div #video_view');
 const videoThree = document.getElementById("three").querySelector('div #video_view');
 
-console.log(videoOne)
-
 function showVideo(link,video) {
     // const video = document.querySelector('div #video_view');
     video.innerHTML = link;
