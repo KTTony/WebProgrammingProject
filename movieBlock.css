@@ -207,6 +207,9 @@ img{
   display:block;
   color:black;
 }
+.movie_title a:hover{
+  color:#D0104C;
+}
 .movie_time{
   margin: 3% 0 0 3%;
   font-size: 16px;
