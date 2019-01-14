@@ -47,7 +47,7 @@ body::-webkit-scrollbar {
   display: none;
 }
 body{
-  font-family: 'Noto Serif TC', serif;
+  font-family: 'Noto Sans TC', sans-serif;
   position: relative;
   -ms-overflow-style: none;
   background-color: #EB7A77;
@@ -200,7 +200,6 @@ img{
   font-size: 24px;
   font-weight: bold;
   font-size:25px;
-
 }
 .movie_title a{
   text-decoration:none;

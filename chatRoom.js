@@ -15,6 +15,13 @@ document.querySelector("footer .aboutButton").addEventListener('click',()=>{
     document.querySelector(".aboutUS").style.display = "flex";
     document.querySelector(".backToMain").style.display = "block";
     document.querySelector(".movieWrap").style.display = "none";
+    document.querySelector(".tmdb-result").innerHTML = "";
+    offVideo(videoOne);
+    offVideo(videoTwo);
+    offVideo(videoThree);
+    document.querySelector("#one").style.display = "none";
+    document.querySelector("#two").style.display = "none";
+    document.querySelector("#three").style.display = "none";
     var textBox = document.querySelector(".textBox");
     textBox.scrollTop = textBox.scrollHeight;
     document.querySelector('body').scrollIntoView({ behavior: 'smooth', block: 'start' });
