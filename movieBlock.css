@@ -181,6 +181,8 @@ h2{
 .movie_context{
   width: 70%;
   height: 100%;
+  padding-right: 5px;
+  margin-right: 20px;
   position: relative; 
 }
 img{
