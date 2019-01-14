@@ -13,6 +13,9 @@ document.querySelector(".backToMain").addEventListener("click", () => {
     document.querySelector(".aboutUS").style.display = "none";
     document.querySelector(".movieWrap").style.display = "flex";
     document.querySelector("header").style.display = "block";
+    offVideo(videoOne);
+    offVideo(videoTwo);
+    offVideo(videoThree);
     document.querySelector("#one").style.display = "none";
     document.querySelector("#two").style.display = "none";
     document.querySelector("#three").style.display = "none";
