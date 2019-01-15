@@ -9,7 +9,7 @@ var config = {
 firebase.initializeApp(config);
 
 var chatRoom = firebase.database().ref('chatRoom');
-document.querySelector("footer .aboutButton").addEventListener('click',()=>{
+document.querySelector("footer .aboutButton").addEventListener('click', () => {
     document.querySelector("header").style.display = "none";
     document.querySelector(".tmdb-result").innerHTML = "";
     document.querySelector(".aboutUS").style.display = "flex";
@@ -32,7 +32,7 @@ document.querySelector("footer .aboutButton").addEventListener('click',()=>{
 chatRoom.on('value', async function (snapshot) {
     var test = snapshot.val();
     var textBox = document.querySelector(".textBox");
-    textBox.innerHTML="";
+    textBox.innerHTML = "";
     for (const i in test) {
         var middunSpace = document.createElement("div");
         var chatMessageWrap = document.createElement("div");
@@ -64,13 +64,13 @@ chatRoom.on('value', async function (snapshot) {
 function chatBox() {
     var name = document.querySelector("#chatName").value;
     var writeText = document.querySelector("#chatText").value;
-    if(name!=""&&writeText!=""){
+    if (name != "" && writeText != "") {
         var createText = chatRoom.push();
-    createText.set({
-        "name": name,
-        "text": writeText
-    });
-    document.querySelector("#chatName").value="";
-    document.querySelector("#chatText").value="";
+        createText.set({
+            "name": name,
+            "text": writeText
+        });
+        document.querySelector("#chatName").value = "";
+        document.querySelector("#chatText").value = "";
     }
 }
