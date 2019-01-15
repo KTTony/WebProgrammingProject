@@ -55,6 +55,9 @@ function search(e) {
     document.querySelector(".backToMain").style.display = "block";
     document.querySelector("header").style.display = "none";
     document.querySelector(".movieWrap").style.display = "none";
+    document.querySelector("#one").style.display = "none";
+    document.querySelector("#two").style.display = "none";
+    document.querySelector("#three").style.display = "none";
     e.preventDefault();
     resultT.innerHTML = "<h2>搜尋結果</h2>";
     var searchTitle = input.value;
