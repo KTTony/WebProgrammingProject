@@ -52,7 +52,7 @@ async function movieResult(source, poster, name, year, overview, id, score) {
 }
 
 function search(e) {
-    document.querySelector(".backToMai n").style.display = "block";
+    document.querySelector(".backToMain").style.display = "block";
     document.querySelector("header").style.display = "none";
     document.querySelector(".movieWrap").style.display = "none";
     document.querySelector("#one").style.display = "none";
