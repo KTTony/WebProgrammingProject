@@ -1,15 +1,15 @@
 var config = {
-    apiKey: "AIzaSyAebII7M5tRLEZLzGrXr1OI5t5M2-Merjg",
-    authDomain: "wpproject-39c2f.firebaseapp.com",
-    databaseURL: "https://wpproject-39c2f.firebaseio.com",
-    projectId: "wpproject-39c2f",
-    storageBucket: "wpproject-39c2f.appspot.com",
-    messagingSenderId: "725498474206"
+    apiKey: "AIzaSyB24DmulfDKl5MRwQxTnG9hn8DtikCj9xs",
+    authDomain: "arctic-hybrid-207016.firebaseapp.com",
+    databaseURL: "https://arctic-hybrid-207016.firebaseio.com",
+    projectId: "arctic-hybrid-207016",
+    storageBucket: "arctic-hybrid-207016.appspot.com",
+    messagingSenderId: "854815884301"
 };
 firebase.initializeApp(config);
 
 var chatRoom = firebase.database().ref('chatRoom');
-document.querySelector("footer .aboutButton").addEventListener('click',()=>{
+document.querySelector("footer .aboutButton").addEventListener('click', () => {
     document.querySelector("header").style.display = "none";
     document.querySelector(".tmdb-result").innerHTML = "";
     document.querySelector(".aboutUS").style.display = "flex";
@@ -32,7 +32,7 @@ document.querySelector("footer .aboutButton").addEventListener('click',()=>{
 chatRoom.on('value', async function (snapshot) {
     var test = snapshot.val();
     var textBox = document.querySelector(".textBox");
-    textBox.innerHTML="";
+    textBox.innerHTML = "";
     for (const i in test) {
         var middunSpace = document.createElement("div");
         var chatMessageWrap = document.createElement("div");
@@ -64,13 +64,13 @@ chatRoom.on('value', async function (snapshot) {
 function chatBox() {
     var name = document.querySelector("#chatName").value;
     var writeText = document.querySelector("#chatText").value;
-    if(name!=""&&writeText!=""){
+    if (name != "" && writeText != "") {
         var createText = chatRoom.push();
-    createText.set({
-        "name": name,
-        "text": writeText
-    });
-    document.querySelector("#chatName").value="";
-    document.querySelector("#chatText").value="";
+        createText.set({
+            "name": name,
+            "text": writeText
+        });
+        document.querySelector("#chatName").value = "";
+        document.querySelector("#chatText").value = "";
     }
 }
