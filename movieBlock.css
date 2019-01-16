@@ -409,6 +409,7 @@ footer .aboutButton:hover{
       width: 65%;
       padding: 10px;
       text-align: center;
+      Justify-content: space-between;
       margin-top: 25px;
   }
   .stars , .stills{
@@ -423,7 +424,10 @@ footer .aboutButton:hover{
   .star, .still{
       box-shadow: 0 0 1.5px 2px rgba(4,4,4,0.6);
       font-size: 12px;
-      line-height: 20px;	
+      /* line-height: 20px;	 */
+  }
+  .star{
+    line-height: 20px;
   }
   
   .stars .star{
@@ -482,14 +486,18 @@ footer .aboutButton:hover{
     }
     .mainstars .stars,.mainstills .stills{
     width: 100%;
+    display: flex;
     flex-direction:row;
     align-items:center;
+    Justify-content: space-between;
+    }
+    .mainstills .stills{
+      Justify-content: center;
     }
     .stars .star,.stills .still{
     width: 40%;
     height: 100%;
     margin-bottom: 10px;
-    
     }
     .stills .still{
         width: 90%;
@@ -666,7 +674,7 @@ border-radius: 3px;
 }
 .youlike p{
 font-size: 12px;
-font-style: italic;
+/* font-style: italic; */
 font-weight: lighter;
 }
 
