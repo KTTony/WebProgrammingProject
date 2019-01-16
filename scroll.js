@@ -4,7 +4,6 @@ const videoThree = document.getElementById("three").querySelector('div #video_vi
 
 function showVideo(link,video) {
     // const video = document.querySelector('div #video_view');
-    console.log(video);
     video.innerHTML = link;
     document.body.classList.add('no-scroll');
     video.style.top = window.pageYOffset + 'px';
